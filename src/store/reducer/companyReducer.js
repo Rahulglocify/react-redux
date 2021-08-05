@@ -12,8 +12,7 @@ const companyreducer = (state = {}, { type, payload }) => {
 
   switch (type) {
     case UPDATE_COMPANY:
-      return { name: payload };
-
+      return Object.assign({}, state, { name: payload });
     default:
       return state;
   }
